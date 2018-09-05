@@ -1,0 +1,23 @@
+---
+- hosts: localhost
+  connection: local
+  gather_facts: false
+  user: root
+  tasks:
+    - name: Create security group for ec2 instance
+      ec2_group:
+        name: ansible-created-sg
+        description: "ansible is going to provision this sg"
+        vpc_id: "vpc-b669f6df"
+        region: "us-east-2"
+        aws_access_key: "AKIAJV6QWR7TM7XVUW7Q"
+        aws_secret_key: "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"
+        rules:
+          - proto: tcp
+            from_ports: 80
+            to_port: 80
+          - proto: tcp
+            from_port: 22
+            cidr_ip: 0.0.0.0/0
+          - porto: tcp
+            from_port: 443

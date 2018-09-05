@@ -1,0 +1,8 @@
+---
+- hosts: testservers
+  tasks:
+    - name: Transfer file from ServerA to ServerB
+      synchronize:
+        src : /opt/demo
+        dest: /opt/
+      delegate_to: <server A>

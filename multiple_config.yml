@@ -1,0 +1,4 @@
+---
+- hosts:
+  name: install {{}} on the server
+  yum:

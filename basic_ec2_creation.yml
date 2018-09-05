@@ -1,0 +1,11 @@
+---
+- hosts: localhost
+  connection: local
+  tasks:
+    - name: launch ec2 instance
+      ec2:
+          include_tasks: instance_commonvars.yml
+          wait: true
+      register: ec2
+
+

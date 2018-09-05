@@ -1,0 +1,10 @@
+---
+- name: Common details of my vpc
+  vars:
+    vpc_subnet_id: subnet-fb325f92
+    instance_type: t2.micro
+    security_group: EC2 SG
+    image: ami-5e8bb23b
+    keypair: ci_master.pem
+    region: us-east-2a
+    count: 1
