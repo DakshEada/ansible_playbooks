@@ -1,0 +1,4 @@
+---
+- hosts: localhost
+  vars:
+      local_home: "{{ lookup('env','HOME') }}"

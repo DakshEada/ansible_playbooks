@@ -1,0 +1,15 @@
+---
+- hosts: webserver
+  tasks:
+  #- name: make a directory
+   # file:
+    #  path: "/root/.ssh/authorized_keys"
+     # state: touch
+  - name: put pubkey
+    copy:
+      src: "/root/.ssh/id_rsa.pub"
+      dest: "/root/.ssh/id_rsa.pub"
+      owner: root
+      group: root
+      mode: 0600
+
