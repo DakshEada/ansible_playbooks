@@ -10,8 +10,8 @@
         description: "ansible is going to provision this sg"
         vpc_id: "vpc-b669f6df"
         region: "us-east-2"
-        aws_access_key: "AKIAJV6QWR7TM7XVUW7Q"
-        aws_secret_key: "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"
+        aws_access_key: 
+        aws_secret_key: 
         rules:
           - proto: tcp
             from_ports: 80
