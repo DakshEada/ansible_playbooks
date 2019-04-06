@@ -8,3 +8,4 @@
       group:
         name: admin
         state: present
+        local: 'groupdel'
