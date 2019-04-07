@@ -43,12 +43,18 @@
         append: yes
         state: present
 
-    - name: loop through users
       loop:
         - sysadmin1
         - sysadmin2
         - developer1
         - developer2
+
+#    - name: loop through users
+#      loop:
+#        - sysadmin1
+#        - sysadmin2
+#        - developer1
+#        - developer2
 
 #    - name: Add the user 'sysadmin1' associated with group of 'admin'
 #
