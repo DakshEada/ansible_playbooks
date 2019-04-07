@@ -4,27 +4,24 @@
   become_user: root
   gather_facts: false
   tasks:
-    - name: create users
-      user:
-        name: "{{ item }}"
-        create_home: yes
-        groups: admin
-        #/generate_ssh_key: yes
-        #/ssh_key_bits: 2048
-        #/ssh_keys_file: .ssh/id_rsa
-        shell: /bin/bash
-      loop:
-        - sysadmin1
-        - sysadmin2
-        - developer1
-        - developer2
+#    - name: create users
+#      user:
+#        name: "{{ item }}"
+#        create_home: yes
+#        /generate_ssh_key: yes
+#        /ssh_key_bits: 2048
+#        /ssh_keys_file: .ssh/id_rsa
+#        shell: /bin/bash
+#      loop:
+#        - sysadmin1
+#        - sysadmin2
+#        - developer1
+#        - developer2
 #/to create a new group and add users to the group, host module requires groupadd, groupdel, groupmod modules
     - name: add group admin
       group:
         name: admin
         state: present
-        local: 'groupadd admin'
-
 
     - name: Check if 'wheel' group exists
       group:
@@ -53,35 +50,35 @@
         - developer1
         - developer2
 
-    - name: Add the user 'sysadmin1' associated with group of 'admin'
-
-      user:
-        name: sysadmin1
-        create_home:  yes
-        groups: admin
-        generate_ssh_key: yes
-        ssh_key_bits: 2048
-        ssh_keys_file: .ssh/id_rsa
-        shell: /bin/bash
-
-
-    - name: Add the user 'sysadmin2' associated with group of 'admin'
-      user:
-        name: sysadmin2
-        create_home:  yes
-        groups: admin
-        generate_ssh_key: yes
-        ssh_key_bits: 2048
-        ssh_keys_file: .ssh/id_rsa
-        shell: /bin/bash
-
-    - name: Add the user 'sysadmin1' associated with group of 'admin'
-      user:
-        name: "{{ item }}"
-        create_home:  yes
-        groups: admin
-        generate_ssh_key: yes
-        ssh_key_bits: 2048
-        ssh_keys_file: .ssh/id_rsa
-        shell: /bin/bash
+#    - name: Add the user 'sysadmin1' associated with group of 'admin'
+#
+#      user:
+#        name: sysadmin1
+#        create_home:  yes
+#        groups: admin
+#        generate_ssh_key: yes
+#        ssh_key_bits: 2048
+#        ssh_keys_file: .ssh/id_rsa
+#        shell: /bin/bash
+#
+#
+#    - name: Add the user 'sysadmin2' associated with group of 'admin'
+#      user:
+#        name: sysadmin2
+#        create_home:  yes
+#        groups: admin
+#        generate_ssh_key: yes
+#        ssh_key_bits: 2048
+#        ssh_keys_file: .ssh/id_rsa
+#        shell: /bin/bash
+#
+#    - name: Add the user 'sysadmin1' associated with group of 'admin'
+#      user:
+#        name: "{{ item }}"
+#        create_home:  yes
+#        groups: admin
+#        generate_ssh_key: yes
+#        ssh_key_bits: 2048
+#        ssh_keys_file: .ssh/id_rsa
+#        shell: /bin/bash
 
