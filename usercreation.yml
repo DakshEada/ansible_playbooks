@@ -8,9 +8,9 @@
 #      user:
 #        name: "{{ item }}"
 #        create_home: yes
-#        /generate_ssh_key: yes
-#        /ssh_key_bits: 2048
-#        /ssh_keys_file: .ssh/id_rsa
+#        generate_ssh_key: yes
+#        ssh_key_bits: 2048
+#        ssh_keys_file: .ssh/id_rsa
 #        shell: /bin/bash
 #      loop:
 #        - sysadmin1
@@ -18,36 +18,48 @@
 #        - developer1
 #        - developer2
 #/to create a new group and add users to the group, host module requires groupadd, groupdel, groupmod modules
-    - name: add group admin
-      group:
-        name: admin
-        state: present
-
-    - name: Check if 'wheel' group exists
-      group:
-        name: wheel
-        state: present
-
-    - name: allow 'wheel' group to ahve passwordless sudo
-      lineinfile:
-        dest: /etc/sudoers
-        state: present
-        regexp: '^%wheel'
-        line: '%wheel ALL=(ALL) NOPASSWD: ALL'
-        validate: 'visudo -cf %s'
-
-    - name: add sudoers users to wheel group
+    - name: create several users and assign them to appropriate groups
       user:
-        name: "{{ item }}"
-        groups: wheel
-        append: yes
+        name: "{{ item.name }}"
+        create_home: yes
+        shell: /bin/bash
         state: present
-
+        groups: "{{ item.groups }}"
       loop:
-        - sysadmin1
-        - sysadmin2
-        - developer1
-        - developer2
+        - { name: 'sysadmin1', groups: 'admin'}
+        - { name: 'sysadmin2', groups: 'admin'}
+        - { name: 'developer1', groups: 'dev'}
+        - { name: 'developer2', groups: 'dev'}
+#        - sysadmin1
+#        - sysadmin2
+#        - developer1
+#        - developer2
+
+#    - name: Check if 'wheel' group exists
+#      group:
+#        name: wheel
+#        state: present
+#
+#    - name: allow 'wheel' group to ahve passwordless sudo
+#      lineinfile:
+#        dest: /etc/sudoers
+#        state: present
+#        regexp: '^%wheel'
+#        line: '%wheel ALL=(ALL) NOPASSWD: ALL'
+#        validate: 'visudo -cf %s'
+
+#    - name: add sudoers users to wheel group
+#      user:
+#        name: "{{ item }}"
+#        groups: wheel
+#        append: yes
+#        state: present
+#
+#      loop:
+#        - sysadmin1
+#        - sysadmin2
+#        - developer1
+#        - developer2
 
 #    - name: loop through users
 #      loop:
