@@ -24,6 +24,8 @@
       group:
         name: admin
         state: present
+        name: dev
+        state: present
 
     - name: create several users and assign them to appropriate groups
       user:
