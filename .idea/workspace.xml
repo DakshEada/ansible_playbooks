@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="508f2df5-60dc-42c4-8173-8f9db6a7184e" name="Default" comment="creating multiple users and assigning them to appropriate groups">
+    <list default="true" id="508f2df5-60dc-42c4-8173-8f9db6a7184e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/apcahe_config_yml" afterPath="$PROJECT_DIR$/apcahe_config_yml" />
-      <change beforePath="$PROJECT_DIR$/copy_playbook.yml" afterPath="$PROJECT_DIR$/copy_playbook.yml" />
-      <change beforePath="$PROJECT_DIR$/httpd_install.yml" afterPath="$PROJECT_DIR$/httpd_install.yml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -59,8 +57,8 @@
       <file leaf-file-name="apcahe_config_yml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/apcahe_config_yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+            <state relative-caret-position="360">
+              <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -69,8 +67,8 @@
       <file leaf-file-name="httpd_install.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/httpd_install.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="31" column="23" lean-forward="true" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
+            <state relative-caret-position="525">
+              <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -116,15 +114,15 @@
         <option value="$PROJECT_DIR$/shell_module_ex.yml" />
         <option value="$PROJECT_DIR$/createnewgroup.yml" />
         <option value="$PROJECT_DIR$/usercreation.yml" />
-        <option value="$PROJECT_DIR$/httpd_install.yml" />
         <option value="$PROJECT_DIR$/copy_playbook.yml" />
+        <option value="$PROJECT_DIR$/httpd_install.yml" />
         <option value="$PROJECT_DIR$/apcahe_config_yml" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="119" />
-    <option name="y" value="26" />
+    <option name="x" value="195" />
+    <option name="y" value="23" />
     <option name="width" value="1400" />
     <option name="height" value="915" />
   </component>
@@ -272,11 +270,25 @@
       <option name="project" value="LOCAL" />
       <updated>1554685946697</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="changing syntax of the playbook">
+      <created>1554743221630</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1554743221630</updated>
+    </task>
+    <task id="LOCAL-00011" summary="forgot to add file module to change the ownership of httpd to apache">
+      <created>1554743376127</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1554743376127</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="119" y="26" width="1400" height="915" extended-state="0" />
+    <frame x="195" y="23" width="1400" height="915" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -310,7 +322,10 @@
     <MESSAGE value="creating multiple users and assigning them to appropriate groups" />
     <MESSAGE value="error in importing another playbook. impot_playbook not supported by 'user' module" />
     <MESSAGE value="created group 'dev'" />
-    <option name="LAST_COMMIT_MESSAGE" value="created group 'dev'" />
+    <MESSAGE value="changing syntax of the playbook" />
+    <MESSAGE value="forgot to add file module to change the ownership of httpd to apache" />
+    <MESSAGE value="escalating user to root" />
+    <option name="LAST_COMMIT_MESSAGE" value="escalating user to root" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -660,16 +675,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/httpd_install.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="23" lean-forward="true" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
+        <state relative-caret-position="525">
+          <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apcahe_config_yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        <state relative-caret-position="360">
+          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding />
         </state>
       </provider>

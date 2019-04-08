@@ -1,5 +1,7 @@
 ---
 - hosts: new_dc_webserver
+  become: yes
+  become_user: root
   tasks:
 
 #    - name: take a backup on the new server
