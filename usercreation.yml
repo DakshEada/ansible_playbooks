@@ -18,9 +18,13 @@
 #        - developer1
 #        - developer2
 #/to create a new group and add users to the group, host module requires groupadd, groupdel, groupmod modules
-    - name: import playbook to create new groups
-      import_playbook: createnewgroup.yml
-    
+#    - name: import playbook to create new groups
+#      import_playbook: createnewgroup.yml
+    - name: create a new group
+      group:
+        name: admin
+        state: present
+
     - name: create several users and assign them to appropriate groups
       user:
         name: "{{ item.name }}"
