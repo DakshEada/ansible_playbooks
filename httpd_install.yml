@@ -1,7 +1,34 @@
 ---
-- hosts: all
+- hosts: webserver
   tasks:
     - name: install httpd on server
       yum:
         name: httpd
         state: latest
+# httpd service will be started on boot
+    - name: enable httpd service on boot
+      service:
+        name: httpd
+        state: started
+        enabled: yes
+
+    - name: create a new group
+      group:
+        name: apache
+        state: present
+
+    - name: create user 'apache'
+      user:
+        name: apache
+        group: apache
+        append: yes
+
+    - name: asign user 'apache' to 'httpd' folder
+        path: /etc/httpd
+        owner: apache
+        group: apache
+        mode: 0644
+        recursive: yes
+#copy httpd config file
+
+

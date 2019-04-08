@@ -1,8 +1,21 @@
 ---
-- hosts: testservers
+- hosts:
   tasks:
-    - name: Transfer file from ServerA to ServerB
-      synchronize:
-        src : /opt/demo
-        dest: /opt/
-      delegate_to: <server A>
+#/copy config files
+    - name: Configure 'httpd.conf'
+      copy:
+        src: /etc/ansible/main_site/prod/fe_servers/httpd.conf
+        dest: /etc/ansible/apache/files
+        owner: apache
+        group: apache
+        mode: 0644
+        backup: yes
+
+    - name: load modules
+      copy:
+        src: /etc/ansible/main_site/prod/fe_server/php.modules
+        dest: /etc/ansible/apache/files
+        owner: apache
+        group: apache
+        mode: 0644
+        backup: yes
