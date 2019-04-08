@@ -24,7 +24,7 @@
         append: yes
 
     - name: asign user 'apache' to 'httpd' folder
-        path: /etc/httpd
+        name: /etc/httpd
         owner: apache
         group: apache
         mode: 0644
