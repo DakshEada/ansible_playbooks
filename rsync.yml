@@ -1,0 +1,10 @@
+---
+- hosts:
+  become: yes
+  become_user: root
+  tasks:
+  - name: check if rsync is installed
+    yum:
+      name: rsync
+      state: present
+
