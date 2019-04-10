@@ -1,5 +1,5 @@
 ---
-- hosts: webserver
+- hosts: "new_dc_webserver, old_dc_webserver"
   become: yes
   become_user: root
   gather_facts: false
@@ -22,23 +22,26 @@
 #      import_playbook: createnewgroup.yml
     - name: create a new group
       group:
-        name: admin
+        name: ansible
         state: present
-        name: dev
+        name: ansible
         state: present
 
     - name: create several users and assign them to appropriate groups
       user:
-        name: "{{ item.name }}"
+        name: ansile
         create_home: yes
         shell: /bin/bash
+        generate_ssh_key: yes
+        ssh_key_bits: 2048
+        ssh_keys_file: .ssh/id_rsa
         state: present
-        groups: "{{ item.groups }}"
-      loop:
-        - { name: 'sysadmin1', groups: 'admin'}
-        - { name: 'sysadmin2', groups: 'admin'}
-        - { name: 'developer1', groups: 'dev'}
-        - { name: 'developer2', groups: 'dev'}
+        groups: ansible"
+#      loop:
+#        - { name: 'sysadmin1', groups: 'admin'}
+#        - { name: 'sysadmin2', groups: 'admin'}
+#        - { name: 'developer1', groups: 'dev'}
+#        - { name: 'developer2', groups: 'dev'}
 #        - sysadmin1
 #        - sysadmin2
 #        - developer1
