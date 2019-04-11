@@ -1,5 +1,5 @@
 ---
-- hosts: "new_dc_webserver, old_dc_webserver"
+- hosts: new_dc_webserver
   become: yes
   become_user: root
   gather_facts: false
@@ -20,33 +20,40 @@
 #/to create a new group and add users to the group, host module requires groupadd, groupdel, groupmod modules
 #    - name: import playbook to create new groups
 #      import_playbook: createnewgroup.yml
-    - name: create a new group
-      group:
-        name: ansible
-        state: present
-        name: ansible
-        state: present
+#    - name: create a new group
+#      group:
+#        name: ansible
+#        state: present
+#        name: ansible
+#        state: present
 
     - name: create several users and assign them to appropriate groups
       user:
-        name: ansile
+        name:  jack #"{{ item.name }}"
         create_home: yes
         shell: /bin/bash
         generate_ssh_key: yes
         ssh_key_bits: 2048
         ssh_keys_file: .ssh/id_rsa
-        state: present
-        groups: ansible"
+
+#        state: present
+
 #      loop:
 #        - { name: 'sysadmin1', groups: 'admin'}
 #        - { name: 'sysadmin2', groups: 'admin'}
 #        - { name: 'developer1', groups: 'dev'}
 #        - { name: 'developer2', groups: 'dev'}
-#        - sysadmin1
-#        - sysadmin2
-#        - developer1
-#        - developer2
-
+#
+#    - name: assign users to appropriate groups
+#      user:
+#        name:  "{{ item.name }}"
+#        groups: "{{ item.groups }}"
+#        state: present
+#      loop:
+#        - { name: 'sysadmin1', groups: 'admin'}
+#        - { name: 'sysadmin2', groups: 'admin'}
+#        - { name: 'developer1', groups: 'dev'}
+#        - { name: 'developer2', groups: 'dev'}
 #    - name: Check if 'wheel' group exists
 #      group:
 #        name: wheel
