@@ -20,23 +20,29 @@
 #/to create a new group and add users to the group, host module requires groupadd, groupdel, groupmod modules
 #    - name: import playbook to create new groups
 #      import_playbook: createnewgroup.yml
-#    - name: create a new group
-#      group:
-#        name: ansible
-#        state: present
-#        name: ansible
-#        state: present
+    - name: create a new group
+      group:
+        name: "{{ item.name }}"#ansible
+        state: present
+        #name: ansible
+        #state: present
+      loop:
+        - {name: 'dbadmin'}
+        - {name: 'testadmin'}
 
     - name: create several users and assign them to appropriate groups
       user:
-        name:  jack #"{{ item.name }}"
+        name: "{{ item.name }}"
         create_home: yes
         shell: /bin/bash
         generate_ssh_key: yes
         ssh_key_bits: 2048
-        ssh_keys_file: .ssh/id_rsa
+        groups: "{{ item.groups }}"
+        state: present
 
-#        state: present
+      loop:
+        - { name: 'dbadmin1', groups: 'dbadmin'}
+        - { name: 'testadmin1', groups: 'testadmin'}
 
 #      loop:
 #        - { name: 'sysadmin1', groups: 'admin'}

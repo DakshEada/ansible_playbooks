@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="508f2df5-60dc-42c4-8173-8f9db6a7184e" name="Default" comment="">
+    <list default="true" id="508f2df5-60dc-42c4-8173-8f9db6a7184e" name="Default" comment="syntax changes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/apcahe_config_yml" afterPath="$PROJECT_DIR$/apcahe_config_yml" />
+      <change beforePath="$PROJECT_DIR$/usercreation.yml" afterPath="$PROJECT_DIR$/usercreation.yml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,11 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="usercreation.yml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="usercreation.yml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/usercreation.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="705">
-              <caret line="47" column="13" lean-forward="true" selection-start-line="47" selection-start-column="13" selection-end-line="47" selection-end-column="13" />
+            <state relative-caret-position="735">
+              <caret line="49" column="47" lean-forward="true" selection-start-line="49" selection-start-column="47" selection-end-line="49" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -38,7 +38,7 @@
         <entry file="file://$PROJECT_DIR$/createnewgroup.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
-              <caret line="9" column="22" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="9" selection-end-column="22" />
+              <caret line="9" column="22" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="9" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -48,17 +48,27 @@
         <entry file="file://$PROJECT_DIR$/sshkeycopy.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
-              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+              <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="apcahe_config_yml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/apcahe_config_yml">
+      <file leaf-file-name="apcahe_config.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apcahe_config.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+            <state relative-caret-position="240">
+              <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="rsync.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rsync.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" column="24" lean-forward="true" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -68,7 +78,7 @@
         <entry file="file://$PROJECT_DIR$/httpd_install.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="525">
-              <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+              <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -113,10 +123,11 @@
         <option value="$PROJECT_DIR$/hosts.yml" />
         <option value="$PROJECT_DIR$/shell_module_ex.yml" />
         <option value="$PROJECT_DIR$/createnewgroup.yml" />
-        <option value="$PROJECT_DIR$/usercreation.yml" />
         <option value="$PROJECT_DIR$/copy_playbook.yml" />
         <option value="$PROJECT_DIR$/httpd_install.yml" />
         <option value="$PROJECT_DIR$/apcahe_config_yml" />
+        <option value="$PROJECT_DIR$/rsync.yml" />
+        <option value="$PROJECT_DIR$/usercreation.yml" />
       </list>
     </option>
   </component>
@@ -284,16 +295,43 @@
       <option name="project" value="LOCAL" />
       <updated>1554743376127</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="checking if rsync is installed on the server">
+      <created>1554904255167</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1554904255167</updated>
+    </task>
+    <task id="LOCAL-00013" summary="creating ansible user, along with ssh key">
+      <created>1554905699194</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1554905699194</updated>
+    </task>
+    <task id="LOCAL-00014" summary="trying to rsync from local machine to new dc server">
+      <created>1554991835961</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1554991835961</updated>
+    </task>
+    <task id="LOCAL-00015" summary="trying to understand why user cannot be created with ssh key">
+      <created>1555006370611</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1555006370611</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="195" y="23" width="1400" height="915" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -325,21 +363,21 @@
     <MESSAGE value="changing syntax of the playbook" />
     <MESSAGE value="forgot to add file module to change the ownership of httpd to apache" />
     <MESSAGE value="escalating user to root" />
-    <option name="LAST_COMMIT_MESSAGE" value="escalating user to root" />
+    <MESSAGE value="checking if rsync is installed on the server" />
+    <MESSAGE value="creating ansible user, along with ssh key" />
+    <MESSAGE value="syntax changes" />
+    <MESSAGE value="trying to rsync from local machine to new dc server" />
+    <MESSAGE value="trying to understand why user cannot be created with ssh key" />
+    <MESSAGE value="adding new users to migration servers" />
+    <MESSAGE value="adding users" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding users" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/httpd_install.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apcahe_config_yml">
+    <entry file="file://$PROJECT_DIR$/apcahe_config.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
@@ -390,7 +428,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apcahe_config_yml">
+    <entry file="file://$PROJECT_DIR$/apcahe_config.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
@@ -448,7 +486,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apcahe_config_yml">
+    <entry file="file://$PROJECT_DIR$/apcahe_config.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
@@ -506,7 +544,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apcahe_config_yml">
+    <entry file="file://$PROJECT_DIR$/apcahe_config.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
@@ -534,7 +572,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apcahe_config_yml">
+    <entry file="file://$PROJECT_DIR$/apcahe_config.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
@@ -555,7 +593,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apcahe_config_yml">
+    <entry file="file://$PROJECT_DIR$/apcahe_config.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
@@ -633,10 +671,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sshkeycopy.yml">
+    <entry file="file://$PROJECT_DIR$/copy_playbook.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        <state relative-caret-position="180">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -649,10 +687,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/usercreation.yml">
+    <entry file="file://$PROJECT_DIR$/httpd_install.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="47" column="13" lean-forward="true" selection-start-line="47" selection-start-column="13" selection-end-line="47" selection-end-column="13" />
+        <state relative-caret-position="525">
+          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sshkeycopy.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rsync.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="24" lean-forward="true" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apcahe_config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -660,31 +722,15 @@
     <entry file="file://$PROJECT_DIR$/createnewgroup.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
-          <caret line="9" column="22" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="9" selection-end-column="22" />
+          <caret line="9" column="22" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="9" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/copy_playbook.yml">
+    <entry file="file://$PROJECT_DIR$/usercreation.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/httpd_install.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apcahe_config_yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+        <state relative-caret-position="735">
+          <caret line="49" column="47" lean-forward="true" selection-start-line="49" selection-start-column="47" selection-end-line="49" selection-end-column="47" />
           <folding />
         </state>
       </provider>
