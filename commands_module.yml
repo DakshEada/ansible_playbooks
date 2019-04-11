@@ -1,0 +1,8 @@
+---
+- hosts: local
+  tasks:
+    - name: echo date into a file
+      command:
+      args:
+        argv:
+          - echo $(date) >> /opt/date.txt
